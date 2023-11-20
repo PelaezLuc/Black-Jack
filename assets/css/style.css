@@ -1,0 +1,74 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    background-color: black;
+}
+
+h1 {
+    margin-bottom: 0;
+    line-height: 9vh;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+    color: white;
+}
+
+.cards-logo {
+    margin-bottom: 6px;
+    transform: rotate(346deg);
+}
+
+main {
+    height: 90vh;
+    background-color: #28462a;
+}
+
+#game-buttons {
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.btn {
+    color: white;
+    padding: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+
+#player, #computer {
+    margin-left: 2rem;
+    color: white;
+}
+
+#computer {
+    margin-top: 4rem;
+}
+
+.cards-array {
+    margin-top: 40px;
+    height: 225px;
+    display: flex;
+}
+
+.game-card {
+    position: relative;
+    width: 150px;
+    height: 225px;
+    left: 100px;
+    margin-left: -75px;
+}
