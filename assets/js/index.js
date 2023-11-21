@@ -78,21 +78,23 @@ function juegoCasino() {
             }
         }
         turnoCasino = false; 
-        if (puntosCasino == 21){
-            alert('GANA EL CASINO');
-        }
-        else if (puntosCasino < 21 && puntosCasino > puntosJugador) {
-            alert('GANA EL CASINO')
-        }
-        else if (puntosCasino < puntosJugador) {
-            alert('GANA EL CASINO');
-        }
-        else if (puntosCasino > 21 && puntosJugador < 21) {
-            alert('GANA EL JUGADOR');
-        }
-        else {
-            alert('JUGADOR Y CASINO EMPATAN')
-        }
+        setTimeout(()=>{
+            if (puntosCasino <= 21 && puntosCasino > puntosJugador) {
+                alert('GANA EL CASINO')
+            }
+            else if (puntosCasino < puntosJugador) {
+                alert('GANA EL JUGADOR');
+            }
+            else if (puntosCasino > 21 && puntosJugador < 21) {
+                alert('GANA EL JUGADOR');
+            }
+            else if(puntosJugador > puntosCasino) {
+                alert('GANA EL JUGADOR');
+            }
+            else {
+                alert('JUGADOR Y CASINO EMPATAN')
+            }
+        }, 100)    
     } 
 }
 
@@ -118,17 +120,19 @@ btnPedirCarta.onclick = function() {
         cartaJugador.innerHTML += `
             <li><img id="card-image" class="game-card" src="assets/img/${cartasJugador[cartasJugador.length - 1].name}.png" alt=""></img></li>
         `;
-        if(cartasJugador.length <= 4 && puntosJugador === 21) {
-            alert('GANA EL JUGADOR');
-            turnoCasino = false;
-        }
-        else if(cartasJugador.length <= 4 && puntosJugador > 21) {
-            alert('GANA EL CASINO');
-        }
-        else if(cartasJugador.length === 4 && puntosJugador < 21) {
-            detener();
-            juegoCasino();
-        }
+        setTimeout(()=>{
+            if(cartasJugador.length <= 4 && puntosJugador === 21) {
+                alert('GANA EL JUGADOR');
+                turnoCasino = false;
+            }
+            else if(cartasJugador.length <= 4 && puntosJugador > 21) {
+                alert('GANA EL CASINO');
+            }
+            else if(cartasJugador.length === 4 && puntosJugador < 21) {
+                detener();
+                juegoCasino();
+            }
+        }, 100) 
     }
 }
 
