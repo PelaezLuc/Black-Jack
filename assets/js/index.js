@@ -73,7 +73,7 @@ function juegoCasino() {
             cartaCasino.innerHTML += `
                 <li><img id="card-image" class="game-card" src="assets/img/${cartasCasino[cartasCasino.length - 1].name}.png" alt=""></img></li>
             `;
-            if(puntosCasino > 22) {
+            if(puntosCasino >= 21 || puntosCasino > 15) {
                 break;
             }
         }
